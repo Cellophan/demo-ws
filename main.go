@@ -28,6 +28,6 @@ func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		handler(w, r, counterCh)
 	})
-	fmt.Printf("Server listening on  port 8080 and one of the ip from: %s\n", addrs)
+	fmt.Printf("Server listening on port 8080 and all the interfaces: %s\n", addrs)
 	http.ListenAndServe(":8080", nil)
 }
